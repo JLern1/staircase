@@ -8,14 +8,27 @@ namespace StairCase
 {
     class Program
     {
+        static void staircase(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                if (i != 1) Console.WriteLine();
+                for (int j = n - i - 1; j >= 0; j--)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("#");
+                }
+            }
+        }
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            int n = 6;
+            staircase(n);
+            Console.ReadLine();
         }
     }
 }
